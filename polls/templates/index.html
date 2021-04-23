@@ -1,0 +1,12 @@
+<!--Se recomienda llamar el html con el mismo nombre 
+    de la funcion que se usa para retornar el mismo-->
+
+{% if question %}
+    <ul>
+    {% for q in question %}
+        <li><a href="/polls/{{ q.id }}/">{{ q.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
